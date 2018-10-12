@@ -75,3 +75,13 @@ app.post("/contact", function (req, res) {
   // logs to the terminal window (not the browser)
   console.log('\nCONTACT FORM DATA: ' + name + ' ' + email + ' ' + comment + '\n');
   })
+  // 6 this will execute for all unknown URIs not specifically handled
+app.get(function (req, res) {
+  res.render("404")
+ })
+ 
+ // Listen for an application request on designated port
+ app.listen(port, function () {
+  console.log('Web app started and listening on http://localhost:' + port)
+ })
+ 
